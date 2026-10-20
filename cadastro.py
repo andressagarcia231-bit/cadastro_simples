@@ -1,3 +1,13 @@
+#Variaveis para cadastro
+nome = ""
+idade = ""
+usuario = ""
+senha = ""
+
+ #variaveis para login
+ login_usuario = ""
+ login_usuario = ""
+
 #Apenas a tela de Visualização
 while True:
     print("===================")
@@ -8,19 +18,31 @@ while True:
     print("2 - Fazer login")
     print("3 - Sair")
 
-    opcao = int(input("Escolha uma opcaão: "))
+    opcao = input("Escolha uma opcaão: ")
     #Funcionalidades
     #Se o usuario digitar o Valor 1, vai ser exebido
-    #  a ação
+    #  a ação abaixo:
     if (opcao == "1"):
         print("==========================")
         print("=====Tela de Cadastro=====")
         print("==========================")
+        nome =input("Digite o seu nome: ")
+        idade =input("Digite a sua idade: ")
+        usuario =input ("Digite o seu usuario: ")
+        senha =input("Digite a sua senha  ")
+        print("\n cadastro realizado!\n")
     #Se digititar 2, abre a tela de login
     elif (opcao == "2"):
         print("=========================")
         print("======Tela de Login======")
         print("=========================")
+        login_usuario = input("Digite o usuário cadastrado: ")
+        login_senha = input("Digite a senha : ")
+
+    #Processamento de usuário e senha 
+    if login_usuario == usuario and login_senha == senha :
+        print("\nLogin realiza com sucesso!\n")
+        print("bem vindo,", nome)''
     #Se digitar 3, sai da execução
     elif (opcao == "3"): 
         print("Você está saindo do cadastro, até mais!")
