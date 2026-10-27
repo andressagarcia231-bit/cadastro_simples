@@ -5,8 +5,8 @@ usuario = ""
 senha = ""
 
  #variaveis para login
- login_usuario = ""
- login_usuario = ""
+login_usuario = ""
+login_usuario = ""
 
 #Apenas a tela de Visualização
 while True:
@@ -40,13 +40,37 @@ while True:
         login_senha = input("Digite a senha : ")
 
     #Processamento de usuário e senha 
-    if login_usuario == usuario and login_senha == senha :
-        print("\nLogin realiza com sucesso!\n")
-        print("bem vindo,", nome)''
+    if login_usuario == usuario and login_senha == senha  : 
+        while True:
+            print("\nLogin realiza com sucesso!\n")
+            print("bem vindo,", nome)
+            print("\n=====Àrea do usuário=====\n")
+            print("1 - ver os dados cadastrados")
+            print("2- Voltar para o menu anterior")
+
+            usuario_opcao = input("\nEscolha uma das opções do menu a acima")
+
+            if (usuario_opcao == "1"):
+                print("\n=====================")
+                print("===Dados cadastrados===")
+                print("=====================\n")
+                #Mostrar dados do usuário
+                print("Nome de usuário: ", nome)
+                print("Idade do usuário: ", idade)
+                print("Senha do usuário: ", senha)
+            elif(usuario_opcao == "2"):
+                print("\n você está voltando para o menu anterior")
+                break
+            else:
+                print("\n Opçaõ digitada invalida, use os números do menu!")
+     #Se não estiver correto entra no caso abaixo
+        else:
+         print("\nUsuário ou senha incorretos\n")
+
     #Se digitar 3, sai da execução
-    elif (opcao == "3"): 
+    elif (opcao == "3"):
         print("Você está saindo do cadastro, até mais!")
         break
-  #Se não for nem 1,2 ou 3 mostrar erro e repetir código
-    else: 
-        print("Valor digitado, inválido, use apenas números inteiros do menu.")
+        #Se não for nem 1,2 ou 3 mostrar erro e repetir código
+else:
+         print("Valor digitado inválido, use apenas números inteiros do menu ")
