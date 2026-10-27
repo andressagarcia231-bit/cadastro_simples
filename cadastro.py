@@ -8,6 +8,9 @@ senha = ""
 login_usuario = ""
 login_usuario = ""
 
+#Variaveis de controle
+controle_cadastro = ""
+
 #Apenas a tela de Visualização
 while True:
     print("===================")
@@ -23,15 +26,22 @@ while True:
     #Se o usuario digitar o Valor 1, vai ser exebido
     #  a ação abaixo:
     if (opcao == "1"):
-        print("==========================")
-        print("=====Tela de Cadastro=====")
-        print("==========================")
-        nome =input("Digite o seu nome: ")
-        idade =input("Digite a sua idade: ")
-        usuario =input ("Digite o seu usuario: ")
-        senha =input("Digite a sua senha  ")
-        print("\n cadastro realizado!\n")
-    #Se digititar 2, abre a tela de login
+           while  controle_cadastro != "1 " :
+             print("==========================")
+             print("=====Tela de Cadastro=====")
+             print("==========================")
+             nome =input("Digite o seu nome: ")
+             idade =input("Digite a sua idade: ")
+             usuario =input ("Digite o seu usuario: ")
+             senha =input("Digite a sua senha  ")
+
+             catrole_cadastro = input("\n Você deseja voltar para a tela anterior ?\n 1)-voltar para o meu menu anterior;\n Digite qualquer tecla para refazer o cadastro;\n")
+
+             if (controle_cadastro == "1"):
+                 print("\n cadastro realizado!\n")
+             else:
+                print("Valor digitado inválido, faça o cadastro novamente")
+        #Se digititar 2, abre a tela de login
     elif (opcao == "2"):
         print("=========================")
         print("======Tela de Login======")
@@ -61,6 +71,8 @@ while True:
             elif(usuario_opcao == "2"):
                 print("\n você está voltando para o menu anterior")
                 break
+            elif(usuario_opcao == "3"):
+                senha = input("\nDigite a nova senha: ")
             else:
                 print("\n Opçaõ digitada invalida, use os números do menu!")
      #Se não estiver correto entra no caso abaixo
